@@ -5,7 +5,7 @@
 ![Suricata](https://img.shields.io/badge/Suricata-8.0+-FF6600?style=shields.io&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-Ubuntu%2022.04+-FCC624?style=shields.io&logoColor=white&logo=linux)
 ![SQLite](https://img.shields.io/badge/SQLite-3-003087?style=shields.io&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-28A745?style=shields.io&logoColor=white)
+
 
 > An automated **Intrusion Prevention System (IPS)** that combines real-time network threat detection with automatic firewall response and forensic logging. Built as a lightweight SIEM/SOAR pipeline: **Suricata → Python → iptables + SQLite**.
 
@@ -27,6 +27,7 @@
 ### 4. Incident Database (SQL)
 ![SQL Audit](docs/screenshots/database-integration.jpg)
 *Figure 4: Persistent logging of blocked incidents in SQLite, facilitating post-mortem analysis and security reporting.*
+
 ---
 
 ## 🏗️ Architecture
@@ -233,28 +234,3 @@ This is a single-node defensive system. SQLite gives us zero-config persistence,
 - **Linux Administration**: systemd services, iptables firewall management, file permissions
 - **DevSecOps**: Infrastructure-as-code (install.sh), test automation, forensic logging
 - **Suricata**: Custom rule authoring (threshold, classtype, itype), EVE JSON logging
-
----
-
-## 🗺️ Roadmap
-
-- [ ] Auto-expiry of blocked IPs after configurable timeout
-- [ ] Whitelist support (never block trusted IPs)
-- [ ] Web dashboard (Flask) for incident review
-- [ ] Slack / Email alert notifications
-- [ ] Docker containerization
-- [ ] Integration with MISP threat intelligence feeds
-
----
-
-## 📜 License
-
-MIT — see [LICENSE](LICENSE)
-
----
-
-## 👤 Author
-
-**[Adrià Gardella]**
-- GitHub: [github.com/Gando46](https://github.com/)
-- LinkedIn: [https://www.linkedin.com/in/adri%C3%A0-gardella-1a9a67244/](https://linkedin.com/)
